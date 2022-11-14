@@ -1,0 +1,33 @@
+
+/*
+ * Libtest.h
+ *
+ * Libtest - library fo Robo-labs.ru project
+ * Libtest - библиотека для проекта Robo-labs.ru
+ * 
+ *
+ * Written by noonv, 02.2016.
+*/
+
+#ifndef Libtest_h
+#define Libtest_h
+
+#if defined(ARDUINO) && ARDUINO >= 100
+  #include "Arduino.h"
+#else
+  #include "WProgram.h"
+#endif 
+
+class Libtest
+{
+	public:
+		Libtest(); // Конструктор класса !!!обязателен!!!
+		void hello_world(); // функция выводит в терминал "Hello World"
+		int summa(int x, int y); // функция сложения 2х чисел
+		void led_onoff(int pin, int pause); // функция мигания светодиода
+	private:
+		int motorA; // декларация переменных, которые видны только в пределах класса
+		int motorB; // декларация переменных, которые видны только в пределах класса
+};
+
+#endif // #ifndef robocraft_h
